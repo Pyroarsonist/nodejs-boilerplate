@@ -1,8 +1,8 @@
-import { someEnv } from 'config';
-import debugHandler from 'debug';
+import { isDevelopment, someEnv } from "~/config";
+import debugHandler from "debug";
 
-const debug = debugHandler('app:main');
+const debug = debugHandler("app:main");
 
-console.info('Hello world!');
+console.info("Hello world!");
 debug({ someEnv });
-debug('Environment is development:', globalThis.__DEV__);
+debug("Environment is development:", isDevelopment);
