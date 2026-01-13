@@ -13,4 +13,9 @@ export default defineConfig({
   alias: {
     '~': path.resolve(__dirname, './src'),
   },
+
+  ...(process.env.UNBUNDLE && {
+    minify: false,
+    unbundle: true,
+  }),
 });
